@@ -23,8 +23,8 @@
 }
 
 :root {
-  --background: #FCFBFA;
-  --foreground: #203435;
+  --background: #FFFFFF;
+  --foreground: #111111;
   --🚲: 0.3125vw;
 }
 
@@ -42,11 +42,11 @@
 
 @theme {
   --font-sans: 'Circular Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --color-main-green: #203435;
-  --color-main-white: #FCFBFA;
-  --color-green: #285D60;
-  --color-green4: #516B66;
-  --color-green5: #CFD7D4;
+  --color-main-green: #111111;
+  --color-main-white: #FFFFFF;
+  --color-green: #D91E27;
+  --color-green4: #555555;
+  --color-green5: #E2E2E2;
 }
 
 html, body {
@@ -62,10 +62,10 @@ body {
 }
 
 /* Theme color utilities */
-.text-main_green { color: #203435; }
-.text-green { color: #285D60; }
-.bg-main_white { background-color: #FCFBFA; }
-.bg-green5 { background-color: #CFD7D4; }
+.text-main_green { color: #111111; }
+.text-green { color: #D91E27; }
+.bg-main_white { background-color: #FFFFFF; }
+.bg-green5 { background-color: #E2E2E2; }
 
 /* Fluid Responsive Typography Classes */
 .text-h3-mobile {
@@ -379,10 +379,10 @@ body {
   stroke-width: 1.5;
 }
 .timer-svg circle:first-child {
-  stroke: #CFD7D4;
+  stroke: var(--color-green5);
 }
 .timer-svg circle:last-child {
-  stroke: #285D60;
+  stroke: var(--color-green);
   stroke-dasharray: 37.7; /* 2 * pi * r (r=6) */
   stroke-dashoffset: 37.7;
   transition: none;
@@ -390,21 +390,76 @@ body {
 
 .btn-transparent {
   background-color: transparent;
-  color: #285D60;
-  border: 1px solid #285D60;
+  color: var(--color-green);
+  border: 1px solid var(--color-green);
   padding: calc(var(--🚲) * 12) calc(var(--🚲) * 24);
   border-radius: 9999px;
   font-weight: 500;
   transition: all 0.2s ease-in-out;
 }
 .btn-transparent:hover {
-  background-color: #285D60;
-  color: #FCFBFA;
+  background-color: var(--color-green);
+  color: var(--color-main-white);
 }
 
 .divider {
   width: 1px;
-  background-color: #CFD7D4;
+  background-color: var(--color-green5);
   height: 60%;
   align-self: center;
+}
+
+/* Override Lottie/SVG inline colors to Red/Black/Gray/White */
+.tabs-wrap svg *[stroke*="40, 93, 96"],
+.tabs-wrap svg *[stroke*="40,93,96"],
+.tabs-wrap svg *[stroke*="285d60"],
+.tabs-wrap svg *[stroke*="285D60"] {
+  stroke: var(--color-green) !important;
+}
+
+.tabs-wrap svg *[fill*="40, 93, 96"],
+.tabs-wrap svg *[fill*="40,93,96"],
+.tabs-wrap svg *[fill*="285d60"],
+.tabs-wrap svg *[fill*="285D60"] {
+  fill: var(--color-green) !important;
+}
+
+.tabs-wrap svg *[stroke*="32, 52, 53"],
+.tabs-wrap svg *[stroke*="32,52,53"],
+.tabs-wrap svg *[stroke*="203435"] {
+  stroke: var(--color-main-green) !important;
+}
+
+.tabs-wrap svg *[fill*="32, 52, 53"],
+.tabs-wrap svg *[fill*="32,52,53"],
+.tabs-wrap svg *[fill*="203435"] {
+  fill: var(--color-main-green) !important;
+}
+
+.tabs-wrap svg *[stroke*="81, 107, 102"],
+.tabs-wrap svg *[stroke*="81,107,102"],
+.tabs-wrap svg *[stroke*="516b66"],
+.tabs-wrap svg *[stroke*="516B66"] {
+  stroke: var(--color-green4) !important;
+}
+
+.tabs-wrap svg *[fill*="81, 107, 102"],
+.tabs-wrap svg *[fill*="81,107,102"],
+.tabs-wrap svg *[fill*="516b66"],
+.tabs-wrap svg *[fill*="516B66"] {
+  fill: var(--color-green4) !important;
+}
+
+.tabs-wrap svg *[stroke*="207, 215, 212"],
+.tabs-wrap svg *[stroke*="207,215,212"],
+.tabs-wrap svg *[stroke*="cfd7d4"],
+.tabs-wrap svg *[stroke*="CFD7D4"] {
+  stroke: var(--color-green5) !important;
+}
+
+.tabs-wrap svg *[fill*="207, 215, 212"],
+.tabs-wrap svg *[fill*="207,215,212"],
+.tabs-wrap svg *[fill*="cfd7d4"],
+.tabs-wrap svg *[fill*="CFD7D4"] {
+  fill: var(--color-green5) !important;
 }
