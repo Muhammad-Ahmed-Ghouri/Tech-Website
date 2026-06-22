@@ -32,7 +32,7 @@ export default function Hero() {
       <div className="section-container relative flex-1 flex flex-col justify-between py-4 md:py-6 lg:py-8">
 
         {/* Title and Description block */}
-        <div className="title-wrap absolute top-4 md:top-6 lg:top-8 left-0 w-full flex flex-col md:flex-row justify-between px-1017 md:px-1035 lg:px-1104 gap-4 md:gap-8 pb-4 z-10 pointer-events-none">
+        <div className="title-wrap absolute top-4 md:top-6 lg:top-8 left-0 w-full flex flex-col md:flex-row justify-between pt-12 px-1017 md:px-1035 lg:px-1104 gap-4 md:gap-8 pb-4 z-10 pointer-events-none">
           <div className="flex flex-col">
             {/* Small caps badge */}
             <div className="flex items-center gap-2 mb-2">

@@ -45,7 +45,7 @@ export default function Header() {
           {/* BOOK A BRIEFING Button */}
           <Link
             href="/quote/"
-            className="btn bg-green text-white hover:bg-main_green hover:text-white border-green text-button-large-mobile md:text-button-large-tablet lg:text-button-large-desktop hidden lg:block ml-4 font-[14px] px-4 py-1 rounded-full transition-all duration-200"
+            className="btn bg-brand-red text-white hover:bg-brand-black hover:text-white border-brand-red text-button-large-mobile md:text-button-large-tablet lg:text-button-large-desktop hidden lg:block ml-4 font-[14px] px-4 py-1 rounded-full transition-all duration-200"
           >
             BOOK A BRIEFING
           </Link>

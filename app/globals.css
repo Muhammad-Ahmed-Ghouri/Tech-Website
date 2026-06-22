@@ -42,14 +42,6 @@
   }
 }
 
-/* @theme {
-  --font-sans: 'Circular Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --color-main-green: #111111;
-  --color-main-white: #FFFFFF;
-  --color-green: #D91E27;
-  --color-green4: #555555;
-  --color-green5: #E2E2E2;
-} */
 
 @theme {
   --font-sans: 'Circular Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -674,11 +666,11 @@ body {
 }
 
 .timer-svg circle:first-child {
-  stroke: var(--color-green5);
+  stroke: var(--color-brand-light-gray);
 }
 
 .timer-svg circle:last-child {
-  stroke: var(--color-green);
+  stroke: var(--color-brand-red);
   stroke-dasharray: 37.7;
   /* 2 * pi * r (r=6) */
   stroke-dashoffset: 37.7;
@@ -687,8 +679,8 @@ body {
 
 .btn-transparent {
   background-color: transparent;
-  color: var(--color-green);
-  border: 1px solid var(--color-green);
+  color: var(--color-brand-red);
+  border: 1px solid var(--color-brand-red);
   padding: calc(var(--🚲) * 12) calc(var(--🚲) * 24);
   border-radius: 9999px;
   font-weight: 500;
@@ -696,8 +688,8 @@ body {
 }
 
 .btn-transparent:hover {
-  background-color: var(--color-green);
-  color: var(--color-main-white);
+  background-color: var(--color-brand-red);
+  color: var(--color-brand-white);
 }
 
 /* Nav link hover underline animation (left to right, red) */
@@ -708,7 +700,7 @@ body {
   right: 12px;
   bottom: 0;
   height: 2px;
-  background-color: var(--color-green);
+  background-color: var(--color-brand-red);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -720,62 +712,61 @@ body {
 
 .divider {
   width: 1px;
-  background-color: var(--color-green5);
+  background-color: var(--color-brand-light-gray);
   height: 60%;
   align-self: center;
 }
 
-/* Override Lottie/SVG inline colors to Red/Black/Gray/White */
+/* 1. Structural Outlines -> Change from Red to Black */
 .tabs-wrap svg *[stroke*="40, 93, 96"],
 .tabs-wrap svg *[stroke*="40,93,96"],
 .tabs-wrap svg *[stroke*="285d60"],
 .tabs-wrap svg *[stroke*="285D60"] {
-  stroke: var(--color-green) !important;
+  stroke: var(--color-brand-black) !important;
 }
-
 .tabs-wrap svg *[fill*="40, 93, 96"],
 .tabs-wrap svg *[fill*="40,93,96"],
 .tabs-wrap svg *[fill*="285d60"],
 .tabs-wrap svg *[fill*="285D60"] {
-  fill: var(--color-green) !important;
+  fill: var(--color-brand-black) !important;
 }
 
+/* 2. Accent Details -> Change from Black to Brand Red */
 .tabs-wrap svg *[stroke*="32, 52, 53"],
 .tabs-wrap svg *[stroke*="32,52,53"],
 .tabs-wrap svg *[stroke*="203435"] {
-  stroke: var(--color-main-green) !important;
+  stroke: var(--color-brand-red) !important;
 }
-
 .tabs-wrap svg *[fill*="32, 52, 53"],
 .tabs-wrap svg *[fill*="32,52,53"],
 .tabs-wrap svg *[fill*="203435"] {
-  fill: var(--color-main-green) !important;
+  fill: var(--color-brand-red) !important;
 }
 
+/* 3. Medium UI Tones -> Keep Dark Gray */
 .tabs-wrap svg *[stroke*="81, 107, 102"],
 .tabs-wrap svg *[stroke*="81,107,102"],
 .tabs-wrap svg *[stroke*="516b66"],
 .tabs-wrap svg *[stroke*="516B66"] {
-  stroke: var(--color-green4) !important;
+  stroke: var(--color-brand-dark-gray) !important;
 }
-
 .tabs-wrap svg *[fill*="81, 107, 102"],
 .tabs-wrap svg *[fill*="81,107,102"],
 .tabs-wrap svg *[fill*="516b66"],
 .tabs-wrap svg *[fill*="516B66"] {
-  fill: var(--color-green4) !important;
+  fill: var(--color-brand-dark-gray) !important;
 }
 
+/* 4. Background Fills -> Keep Light Gray */
 .tabs-wrap svg *[stroke*="207, 215, 212"],
 .tabs-wrap svg *[stroke*="207,215,212"],
 .tabs-wrap svg *[stroke*="cfd7d4"],
 .tabs-wrap svg *[stroke*="CFD7D4"] {
-  stroke: var(--color-green5) !important;
+  stroke: var(--color-brand-light-gray) !important;
 }
-
 .tabs-wrap svg *[fill*="207, 215, 212"],
 .tabs-wrap svg *[fill*="207,215,212"],
 .tabs-wrap svg *[fill*="cfd7d4"],
 .tabs-wrap svg *[fill*="CFD7D4"] {
-  fill: var(--color-green5) !important;
+  fill: var(--color-brand-light-gray) !important;
 }
