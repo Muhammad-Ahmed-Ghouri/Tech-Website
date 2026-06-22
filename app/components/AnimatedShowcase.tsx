@@ -77,21 +77,21 @@ export default function AnimatedShowcase({
 
   useEffect(() => {
     setIsMounted(true);
-    
+
     // Check screen width for responsive sizing
     const media = window.matchMedia('(min-width: 1024px)');
     setIsDesktop(media.matches);
-    
+
     const listener = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
     media.addEventListener('change', listener);
-    
+
     return () => media.removeEventListener('change', listener);
   }, []);
 
   if (!isMounted) {
     // Return a stable placeholder container to prevent layout shift during SSR hydration
     return (
-      <div className="w-full max-w-[1440px] aspect-[1440/566] mx-auto" />
+      <div className="w-full max-w-[1800px] aspect-[1440/566] mx-auto" />
     );
   }
 
@@ -103,11 +103,10 @@ export default function AnimatedShowcase({
     <div className="tabs-wrap flex-1 flex flex-col justify-center items-center relative w-full overflow-hidden">
       <div className="tab-items w-full relative flex justify-center items-center overflow-hidden">
         <div
-          className={`w-full mx-auto flex justify-center items-center px-4 ${
-            isDesktop 
-              ? 'max-w-[1440px] aspect-[1440/566]' 
-              : 'max-w-[800px] aspect-[904/804]'
-          }`}
+          className={`w-full mx-auto flex justify-center items-center px-4 ${isDesktop
+              ? 'max-w-[1800px] aspect-[1440/566]'
+              : 'max-w-[1000px] aspect-[904/804]'
+            }`}
         >
           <AnimatePresence mode="wait">
             <motion.div
