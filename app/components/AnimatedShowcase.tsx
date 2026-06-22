@@ -104,8 +104,8 @@ export default function AnimatedShowcase({
       <div className="tab-items w-full relative flex justify-center items-center overflow-hidden">
         <div
           className={`w-full mx-auto flex justify-center items-center px-4 ${isDesktop
-              ? 'max-w-[1800px] aspect-[1440/566]'
-              : 'max-w-[1000px] aspect-[904/804]'
+            ? 'max-w-[1800px] aspect-[1440/566]'
+            : 'max-w-[1000px] aspect-[904/804]'
             }`}
         >
           <AnimatePresence mode="wait">
